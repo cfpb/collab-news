@@ -1,0 +1,63 @@
+{% extends "news/base.html" %}
+
+{% block "content" %}
+<div id="content" class="news feed">
+    <div class="row">
+        <div class="span3">
+            <h1>Feeds</h1>
+            <ul>
+                <li>
+                    {% if selected_feed %}
+                        <a href="{% url "news:list" %}">
+                            All Announcements
+                        </a>
+                    {% else %}
+                        <strong>All Announcements</strong>
+                    {% endif %}
+                </li>
+                {% for feed in news_feeds %}
+                    <li>
+                        {% if feed == selected_feed %}
+                            <strong>{{ feed.title }}</strong>
+                        {% else %}
+                            <a href="{% url "news:feed" feed.slug %}">
+                                {{ feed.title }}
+                            </a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="span8">
+            <h1>Announcements</h1>
+
+            <div class="row">
+                <div class="feed_block">
+                    <ul>
+                    {% for a in items %}
+                        <li>
+                            <span class="date span1">
+                            {{ a.publish_date|date:"M d Y" }}
+                            </span>
+
+                            <ul class="span10">
+                              <li>
+                                <a href="{% url "news:item" a.slug %}">{{ a.title }}</a>
+                                <p>{{ a.body|striptags|truncatewords:25 }}</p>
+                              </li>
+                            </ul>
+                        </li>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block "js_scripts" %}
+    <script type="text/javascript">
+        window.at_model = 'newsitem';
+    </script>
+{% endblock %}

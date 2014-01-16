@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block "title" %}
+    {% if title %}
+        {{ title }}
+    {% else %}
+        Announcements
+    {% endif %}
+{% endblock %}
+
+{% block "section_id" %}news{% endblock %}

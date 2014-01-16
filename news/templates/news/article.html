@@ -1,0 +1,23 @@
+{% extends "news/base.html" %}
+
+{% block "content" %}
+<div id="content" class="news">
+
+<article class="row">
+  <header class="span12">
+      <h1>{{ item.title }}</h1>
+      <div class="meta">
+          Posted by 
+          <span>{{ item.create_user.first_name }} {{ item.create_user.last_name }}</span> 
+          <span>on {{ item.publish_date|date:"M d, Y" }}.</span>
+      </div>
+  </header>
+  <div class="span7 offset4">
+    {% autoescape off %}
+      {{ item.body|linebreaks|urlize }}
+      {% endautoescape %}
+  </div>
+</article>
+
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% load cache %}
+{% load humanize %}
+
+<div class="feed_block feed_news">
+    <h1>Announcements</h1>
+    {% cache 180 core_news %}
+
+        <ul>
+            {% for item in recent_news %}
+          <li>
+            <span class="date span1">
+            {% ifequal item.publish_date|naturalday "today" %}{{ item.publish_date|naturalday|capfirst }}{% endifequal %}
+            {% ifnotequal item.publish_date|naturalday "today" %}
+                {{ item.publish_date|date:"M d" }}
+            {% endifnotequal %}
+            </span>
+
+            <ul class="span10">
+              <li>
+                    <a href="{% url "news:item" item.slug %}">{{ item.title }}</a>
+                <p>{% autoescape off %}{{ item.body|striptags|truncatewords:"20" }}{% endautoescape %}</p>
+              </li>
+            </ul>
+          </li>
+            {% endfor %}
+        </ul>
+    {% endcache %}
+</div>

@@ -1,0 +1,62 @@
+[
+    {
+        "pk": 1,
+        "model": "news.newsfeed",
+        "fields": {
+            "slug": "news",
+            "title": "News"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "news.newsitem",
+        "fields": {
+            "body": "Mlkshk dolor id keytar retro, ennui semiotics etsy godard. Art party est sriracha, pop-up godard squid labore brunch. Lomo delectus bicycle rights, williamsburg helvetica non hoodie mixtape master cleanse. Williamsburg laborum fap skateboard authentic. Retro vegan organic, dolor est semiotics echo park four loko scenester squid nihil mlkshk salvia portland selvage. Nulla jean shorts voluptate, exercitation sustainable photo booth mustache sartorial brooklyn wes anderson odd future dolore. Mustache helvetica magna vegan quis.\r\n\r\nAliquip veniam quis reprehenderit. Wayfarers ea gastropub, lo-fi four loko pitchfork Austin aliqua umami cred deserunt ethnic 3 wolf moon irure wolf. Occupy wayfarers in, readymade art party tattooed exercitation cred aliqua keffiyeh narwhal four loko street art shoreditch est. Freegan hoodie blog shoreditch. Consequat banh mi food truck consectetur forage. Letterpress magna street art sapiente semiotics. Mlkshk mixtape hoodie marfa gastropub blog.\r\n\r\nBanksy in art party incididunt, aliqua cosby sweater organic fingerstache viral scenester 8-bit tumblr qui high life. Accusamus velit nulla thundercats, ut terry richardson brunch mumblecore excepteur 8-bit. Squid sapiente godard, minim odd future fixie raw denim vegan ethnic viral marfa trust fund sustainable photo booth. Banh mi enim placeat officia, viral pour-over four loko nesciunt ennui. Mollit semiotics cardigan, quinoa leggings cray sriracha brooklyn adipisicing. Vinyl single-origin coffee id minim artisan aliquip. PBR elit godard, Austin williamsburg in before they sold out.\r\n\r\nButcher art party laborum, fingerstache mixtape cliche ad artisan. Assumenda pariatur terry richardson, bushwick you probably haven't heard of them iphone ex delectus gastropub. Squid ea jean shorts mcsweeney's, anim iphone placeat etsy dreamcatcher gluten-free est elit. Ethical organic put a bird on it, cupidatat farm-to-table blog vero you probably haven't heard of them sustainable DIY brunch nihil semiotics high life. Austin magna terry richardson voluptate polaroid. Ethical lo-fi narwhal banh mi shoreditch, exercitation delectus sustainable. Freegan polaroid messenger bag four loko.",
+            "feed": 1,
+            "title": "Bat boy discovered on Mars!",
+            "create_user": 1,
+            "publish_date": "2012-02-29T11:27:17Z",
+            "published": true,
+            "slug": "bat-boy-discovered-on-mars"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "news.newsitem",
+        "fields": {
+            "body": "Forage typewriter echo park keytar chillwave. Bespoke retro fingerstache etsy kogi, pickled truffaut gluten-free small batch shoreditch trust fund. Brooklyn jean shorts seitan, small batch swag street art organic 3 wolf moon gastropub kogi forage authentic trust fund wolf. Pop-up wolf cray, authentic art party flexitarian lomo banh mi tattooed polaroid. Gluten-free tofu bicycle rights farm-to-table, mixtape readymade twee butcher keytar helvetica shoreditch pinterest. Dreamcatcher lo-fi hella ethnic butcher. Dreamcatcher vinyl lomo truffaut, direct trade chambray pop-up put a bird on it stumptown cred blog semiotics raw denim beard.\r\n\r\nTrust fund sustainable 8-bit hoodie, forage banksy beard DIY biodiesel american apparel marfa blog craft beer cliche skateboard. Shoreditch vice salvia cray, wolf mumblecore flexitarian kogi. Readymade truffaut chillwave mustache, viral aesthetic art party irony. Pinterest lo-fi cosby sweater selvage, jean shorts bespoke PBR post-ironic synth ethical polaroid vinyl small batch. Skateboard craft beer sriracha, stumptown fingerstache lomo hella bushwick twee synth portland tattooed polaroid echo park. Next level DIY viral, yr synth narwhal banksy. Small batch organic before they sold out, hoodie cosby sweater pour-over four loko +1 truffaut umami vinyl shoreditch pop-up messenger bag.\r\n\r\nBeard biodiesel helvetica authentic narwhal occupy ennui, DIY cardigan bushwick. Pinterest ethnic umami beard hoodie synth. Ennui pitchfork sriracha direct trade. Put a bird on it cred ethical wes anderson vegan. Pour-over pickled hella mcsweeney's, butcher sriracha quinoa mumblecore. Lo-fi ethnic wayfarers umami trust fund street art bespoke dreamcatcher typewriter sustainable synth, authentic terry richardson. Umami pour-over master cleanse, Austin terry richardson godard flexitarian fanny pack cardigan quinoa.\r\n\r\nKogi etsy wes anderson pour-over keytar, stumptown semiotics godard flexitarian polaroid. Authentic occupy narwhal chambray. Sustainable portland pop-up, ennui craft beer occupy iphone food truck squid bicycle rights thundercats synth. Pour-over biodiesel mumblecore, vice odd future helvetica mlkshk four loko tofu godard beard fap terry richardson ethnic. Gentrify photo booth salvia cliche, 3 wolf moon PBR seitan vice odd future shoreditch. Beard portland ennui, brooklyn farm-to-table chambray art party small batch blog aesthetic echo park keytar sriracha kogi. Dreamcatcher pop-up freegan post-ironic, narwhal carles pickled etsy hella.",
+            "feed": 1,
+            "title": "New Android phone released",
+            "create_user": 1,
+            "publish_date": "2011-01-26T11:27:53Z",
+            "published": true,
+            "slug": "new-android-phone-released"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "news.newsitem",
+        "fields": {
+            "body": "Salvia mixtape brooklyn, mcsweeney's trust fund polaroid mumblecore. Mixtape fanny pack gentrify, cillum adipisicing yr qui organic sapiente chambray artisan retro veniam aliqua mustache. Brunch assumenda quis occupy, pop-up in reprehenderit viral. Lo-fi et odio gastropub direct trade, yr dreamcatcher adipisicing leggings commodo vinyl eu. Retro letterpress yr, readymade +1 est organic. Tempor semiotics locavore incididunt, narwhal etsy fixie scenester sint vinyl esse fap direct trade mixtape cred. Portland before they sold out craft beer, magna banh mi voluptate minim.\r\n\r\nViral ethical irony, mixtape hella yr shoreditch cred nesciunt fanny pack. Bespoke leggings VHS, commodo velit photo booth farm-to-table bushwick pitchfork kogi trust fund marfa. Banksy wayfarers lo-fi mlkshk, enim excepteur wolf put a bird on it truffaut gluten-free. Mumblecore mollit carles jean shorts, excepteur nulla forage ex eiusmod odd future. Sed mollit helvetica put a bird on it odio, freegan vegan iphone mumblecore kogi adipisicing aliquip. Fanny pack esse food truck adipisicing culpa sriracha. Mcsweeney's ullamco mixtape nostrud, dolor pitchfork thundercats before they sold out portland voluptate.\r\n\r\nPickled lo-fi freegan semiotics. Cillum consectetur flexitarian, reprehenderit hella polaroid veniam ethnic keytar food truck irony photo booth. Stumptown terry richardson seitan, occupy flexitarian qui farm-to-table. Banh mi next level nostrud street art, et ethnic artisan nulla mixtape marfa vero leggings 8-bit tattooed. Vero nisi truffaut tofu ex butcher velit dolore, fap pariatur irure. You probably haven't heard of them scenester lomo wolf, accusamus swag sed ex blog voluptate. Flexitarian nulla pickled voluptate chillwave aliqua, art party craft beer.\r\n\r\nJean shorts next level do culpa tattooed, shoreditch nostrud mixtape swag before they sold out assumenda leggings eiusmod mumblecore fap. Id cillum dreamcatcher, esse portland in put a bird on it locavore farm-to-table Austin shoreditch. Officia williamsburg tofu dolor, brunch master cleanse velit direct trade food truck sunt deserunt four loko. Salvia tumblr veniam hella, gastropub wayfarers pariatur occupy wolf ex. Officia enim portland godard, artisan fixie ex cliche. Godard sed cillum proident, vice mumblecore high life 8-bit incididunt food truck chillwave. Velit typewriter american apparel, readymade incididunt thundercats tattooed nulla esse +1 vinyl yr tumblr do.",
+            "feed": 1,
+            "title": "Extra special thingy!",
+            "create_user": 1,
+            "publish_date": "2012-02-20T11:39:20Z",
+            "published": true,
+            "slug": "extra-special-thingy"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "news.newsitem",
+        "fields": {
+            "body": "Banh mi nisi gluten-free vice selvage DIY. Qui delectus kale chips lomo. Polaroid delectus DIY, laboris synth kogi whatever occupy small batch flexitarian gastropub sartorial echo park vice consequat. Labore dolore letterpress hoodie, post-ironic artisan next level high life banksy retro organic. Magna salvia portland DIY. Banksy synth raw denim keytar, etsy fixie laboris skateboard portland voluptate. Farm-to-table magna nisi echo park, est chillwave fixie messenger bag.\r\n\r\nSingle-origin coffee kale chips twee, gluten-free DIY placeat assumenda fixie carles velit authentic brooklyn labore. Retro semiotics +1 odio voluptate, master cleanse freegan officia fanny pack. Culpa vero DIY, id irony tofu sustainable small batch Austin placeat ex tumblr. Artisan pop-up commodo, qui freegan organic elit. Aesthetic iphone et, bespoke shoreditch twee swag vero reprehenderit. Polaroid thundercats brunch narwhal magna. Banh mi polaroid cardigan non, aliquip +1 pour-over squid bicycle rights DIY.\r\n\r\nEnim leggings artisan, keffiyeh jean shorts scenester master cleanse aliquip +1 keytar bushwick. Duis nulla veniam, brunch farm-to-table salvia fugiat flexitarian mustache narwhal put a bird on it fixie retro hella. Sunt dreamcatcher ennui small batch artisan, sartorial leggings officia. Brunch carles exercitation, id food truck semiotics swag blog whatever readymade kale chips iphone helvetica retro. Eiusmod scenester nisi assumenda iphone organic. Velit laborum truffaut, pitchfork chillwave ethical ex commodo twee hoodie locavore art party helvetica VHS. Artisan narwhal fixie typewriter veniam 3 wolf moon kogi consectetur tofu, nihil chambray aute sustainable mcsweeney's labore.",
+            "feed": 1,
+            "title": "New life site!",
+            "create_user": 1,
+            "publish_date": "2012-01-05T11:40:33Z",
+            "published": true,
+            "slug": "new-life-site"
+        }
+    }
+]
