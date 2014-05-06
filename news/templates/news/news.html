@@ -18,32 +18,7 @@
     </header><!-- /project-header -->
 
     <div class="row">
-        <div class="span3">
-            <h1>Feeds</h1>
-            <ul>
-                <li>
-                    {% if selected_feed %}
-                        <a href="{% url "news:list" %}">
-                            All Announcements
-                        </a>
-                    {% else %}
-                        <strong>All Announcements</strong>
-                    {% endif %}
-                </li>
-                {% for feed in news_feeds %}
-                    <li>
-                        {% if feed == selected_feed %}
-                            <strong>{{ feed.title }}</strong>
-                        {% else %}
-                            <a href="{% url "news:feed" feed.slug %}">
-                                {{ feed.title }}
-                            </a>
-                        {% endif %}
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
-        <div class="span8">
+        <div class="span9">
             <div class="row">
                 <div class="feed_block">
                     <ul>
@@ -63,6 +38,28 @@
                     {% endfor %}
                 </div>
             </div>
+        </div>
+        <div class="span3 feeds">
+            <h3>Feeds</h3>
+            <ul>
+                {% if not selected_feed %}
+                <li class="active">All Announcements</li>
+                {% else %}
+                <li>
+                    <a href="{% url "news:list" %}">All Announcements</a>
+                </li>
+                {% endif %}
+
+                {% for feed in news_feeds %}
+                    {% if feed == selected_feed %}
+                    <li class="active">{{ feed.title }}</li>
+                    {% else %}
+                    <li>
+                        <a href="{% url "news:feed" feed.slug %}">{{ feed.title }}</a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
         </div>
     </div>
 </div>
