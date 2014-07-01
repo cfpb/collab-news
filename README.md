@@ -1,5 +1,7 @@
 #News
 
+[![Build Status](https://travis-ci.org/cfpb/collab-news.svg?branch=master)](https://travis-ci.org/cfpb/collab-news)
+
 *News* is a [Collab](https://github.com/cfpb/collab) application to show articles in a blog like format to the application users.
 The articles can be categorized in feeds or rendered on the main page.
 
