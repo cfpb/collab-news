@@ -16,7 +16,7 @@ class NewsFeedTest(TestCase):
 
 
 class NewsItemTest(TestCase):
-    fixtures = ['test_fixtures.json', 'news_fixtures.json']
+    fixtures = ['core-test-fixtures', 'news_fixtures.json']
 
     def test_slugify_on_save(self):
         item = NewsItem(title="My News Item",
@@ -28,7 +28,7 @@ class NewsItemTest(TestCase):
 
 
 class NewsItemsTest(WebTest):
-    fixtures = ['test_fixtures.json', 'news_fixtures.json']
+    fixtures = ['core-test-fixtures', 'news_fixtures.json']
 
     def test_news_access(self):
         response = self.client.get(reverse('news:list'))

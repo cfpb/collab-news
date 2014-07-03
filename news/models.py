@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from collab.settings import AUTH_USER_MODEL
 from django.template.defaultfilters import slugify
 
 
@@ -23,7 +23,7 @@ class NewsItem(models.Model):
     body = models.TextField(null=True, blank=True)
     publish_date = models.DateTimeField()
     published = models.BooleanField(default=False)
-    create_user = models.ForeignKey(User)
+    create_user = models.ForeignKey(AUTH_USER_MODEL)
     feed = models.ForeignKey('NewsFeed')
 
     def __unicode__(self):
@@ -59,5 +59,5 @@ class NewsItem(models.Model):
 
 
 class FeedSubscription(models.Model):
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(AUTH_USER_MODEL)
     feed = models.ForeignKey('NewsFeed')
