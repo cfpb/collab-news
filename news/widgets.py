@@ -8,8 +8,16 @@ class NewsWidget(Widget):
     priority = 1
 
     def get_context(self, context, user):
+        news = NewsItem.objects.filter(published=True).order_by('-publish_date')
+        sticky_news = news.filter(sticky=True)[:3]
+        if len(sticky_news) >= 3:
+            recent_news = news.none()
+        else:
+            recent_news = news.filter(sticky=False)[:3-len(sticky_news)]
+
         return {
-            'recent_news': NewsItem.objects.filter(published=True).order_by('-publish_date')[:3]
+            'recent_news': recent_news,
+            'sticky_news': sticky_news
         }
 
 registry.register('news', NewsWidget())
