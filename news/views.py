@@ -33,12 +33,14 @@ def news_item(req, slug):
 @cache_page(60 * 5)
 def news_list(req, slug=None):
     p = _create_params(req)
-    p['items'] = NewsItem.objects.filter(published=True). \
+    news = NewsItem.objects.filter(published=True). \
         order_by('-publish_date')
     if slug:
         feed = get_object_or_404(NewsFeed, slug=slug)
         p['selected_feed'] = feed
-        p['items'] = p['items'].filter(feed_id=feed.id)
+        news = news.filter(feed_id=feed.id)
+    p['sticky_items'] = news.filter(sticky=True)
+    p['items'] = news.filter(sticky=False)
     p['news_feeds'] = NewsFeed.objects.order_by('title')
     return render_to_response(TEMPLATE_PATH + "news.html", p,
                               context_instance=RequestContext(req))

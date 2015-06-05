@@ -24,6 +24,7 @@ class NewsItem(models.Model):
     publish_date = models.DateTimeField()
     published = models.BooleanField(default=False)
     create_user = models.ForeignKey(AUTH_USER_MODEL)
+    sticky = models.BooleanField(default=False)
     feed = models.ForeignKey('NewsFeed')
 
     def __unicode__(self):

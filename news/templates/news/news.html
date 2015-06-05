@@ -20,8 +20,20 @@
     <div class="row">
         <div class="span9">
             <div class="row">
-                <div class="feed_block">
-                    <ul>
+                <div class="feed_block feed_news">
+                    <ul class="sticky_news_items">
+                    {% for a in sticky_items %}
+                        <li>
+                            <ul class="span10">
+                              <li>
+                                <a href="{% url "news:item" a.slug %}">{{ a.title }}</a>
+                                <p>{{ a.body|striptags|truncatewords:25 }}</p>
+                              </li>
+                            </ul>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                    <ul class="news_items">
                     {% for a in items %}
                         <li>
                             <span class="date span1">
@@ -36,6 +48,7 @@
                             </ul>
                         </li>
                     {% endfor %}
+                    </ul>
                 </div>
             </div>
         </div>
