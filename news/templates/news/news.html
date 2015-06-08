@@ -25,7 +25,7 @@
                     {% for a in sticky_items %}
                         <li>
                             <ul class="span10">
-                              <li class='{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}'>
+                              <li class='{% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %}'>
                                 <a href="{% url "news:item" a.slug %}">{{ a.title }}</a>
                                 <p>{{ a.body|striptags|truncatewords:25 }}</p>
                               </li>
@@ -41,7 +41,7 @@
                             </span>
 
                             <ul class="span10">
-                              <li class='{% if forloop.first %}first{% endif %}{% if forloop.last %}last{% endif %}'>
+                              <li class='{% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %}'>
                                 <a href="{% url "news:item" a.slug %}">{{ a.title }}</a>
                                 <p>{{ a.body|striptags|truncatewords:25 }}</p>
                               </li>
