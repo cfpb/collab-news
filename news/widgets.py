@@ -9,11 +9,11 @@ class NewsWidget(Widget):
 
     def get_context(self, context, user):
         news = NewsItem.objects.filter(published=True).order_by('-publish_date')
-        sticky_news = news.filter(sticky=True)[:3]
-        if len(sticky_news) >= 3:
+        sticky_news = news.filter(sticky=True)[:4]
+        if len(sticky_news) >= 4:
             recent_news = news.none()
         else:
-            recent_news = news.filter(sticky=False)[:3-len(sticky_news)]
+            recent_news = news.filter(sticky=False)[:4-len(sticky_news)]
 
         return {
             'recent_news': recent_news,
