@@ -11,13 +11,14 @@ from widgets import NewsWidget
 
 def create_news_items(is_sticky=False, amount=1):
     for i in range(0, amount):
-        item = NewsItem(title=str(randint(0,9)),
+        item = NewsItem(title='silly news item name',
                         publish_date=now(),
                         published=True,
                         create_user_id=1,
-                        feed_id=randint(1,2),
+                        feed_id=randint(1, 2),
                         sticky=is_sticky)
         item.save()
+
 
 class NewsFeedTest(TestCase):
 
@@ -50,6 +51,7 @@ class NewsItemsTest(WebTest):
         self.client.login(username='test1@example.com', password='1')
         response = self.client.get(reverse('news:list'))
         self.assertContains(response, "Bat boy discovered", status_code=200)
+
 
 class NewsWidgetViewTest(TestCase):
     fixtures = ['core-test-fixtures', 'news_fixtures.json']
