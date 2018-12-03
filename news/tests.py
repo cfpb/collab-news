@@ -54,9 +54,8 @@ class NewsItemsTest(WebTest):
 
 
 class NewsWidgetViewTest(TestCase):
-    fixtures = ['core-test-fixtures', 'news_fixtures.json']
-
     def setUp(self):
+        create_news_items(is_sticky=False, amount=7)
         feed = NewsFeed(title='second feed')
         feed.save()
         self.widget = NewsWidget()
