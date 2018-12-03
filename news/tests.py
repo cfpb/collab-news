@@ -54,33 +54,32 @@ class NewsItemsTest(WebTest):
 
 
 class NewsWidgetViewTest(TestCase):
-    fixtures = ['core-test-fixtures', 'news_fixtures.json']
-
     def setUp(self):
+        create_news_items(is_sticky=False, amount=7)
         feed = NewsFeed(title='second feed')
         feed.save()
         self.widget = NewsWidget()
 
     def test_no_stickies(self):
         response = self.widget.get_context(None, None)
-        self.assertEquals(len(response['recent_news']), 4)
+        self.assertEquals(len(response['recent_news']), 6)
         self.assertEquals(len(response['sticky_news']), 0)
 
     def test_one_sticky(self):
         create_news_items(is_sticky=True, amount=1)
         response = self.widget.get_context(None, None)
-        self.assertEquals(len(response['recent_news']), 3)
+        self.assertEquals(len(response['recent_news']), 5)
         self.assertEquals(len(response['sticky_news']), 1)
 
-    def test_four_stickies(self):
-        create_news_items(is_sticky=True, amount=4)
+    def test_six_stickies(self):
+        create_news_items(is_sticky=True, amount=6)
         response = self.widget.get_context(None, None)
         self.assertEquals(len(response['recent_news']), 0)
-        self.assertEquals(len(response['sticky_news']), 4)
+        self.assertEquals(len(response['sticky_news']), 6)
 
-    def test_five_stickies(self):
-        create_news_items(is_sticky=True, amount=5)
+    def test_seven_stickies(self):
+        create_news_items(is_sticky=True, amount=7)
         response = self.widget.get_context(None, None)
         self.assertEquals(len(response['recent_news']), 0)
-        self.assertEquals(len(response['sticky_news']), 4)
+        self.assertEquals(len(response['sticky_news']), 6)
 
