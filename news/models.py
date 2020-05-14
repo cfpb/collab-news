@@ -70,11 +70,9 @@ class CustomModelChoiceField(forms.ModelChoiceField):
 
 class NewsItemAdminForm(forms.ModelForm):
     create_user = CustomModelChoiceField(
-        queryset=get_user_model().objects.filter(is_active=True).exclude(
-            first_name='',
-            last_name='',
-        ).order_by('last_name', 'first_name')
-        ).all()
+        queryset=get_user_model().objects.order_by(
+            'last_name', 'first_name'
+        ).filter(is_active=True).exclude(first_name='', last_name='')
     )
 
     class Meta:
