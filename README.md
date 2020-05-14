@@ -1,4 +1,4 @@
-#News
+# News
 
 [![Build Status](https://travis-ci.org/cfpb/collab-news.svg?branch=master)](https://travis-ci.org/cfpb/collab-news)
 
@@ -6,7 +6,7 @@
 The articles can be categorized in feeds or rendered on the main page.
 
 
-##Pages
+## Pages
 
 News has different views:
 
@@ -14,11 +14,13 @@ News has different views:
 * Feed page (only that feed's articles)
 * Article detail
 
-##Screenshot
+
+## Screenshot
 
 ![index page](screenshots/main.png "Index Page")
 
-##Installation
+
+## Installation
 
 To use this application you will need to first have [Collab](https://github.com/cfpb/collab) installed.
 
@@ -39,6 +41,7 @@ Once the application is installed, add it to core collab's `INSTALLED_APPS` in y
 INSTALLED_APPS += ( 'news', )
 ```
 
-##Contributing
+
+## Contributing
 
 Please read the [contributing guide](./CONTRIBUTING.md).

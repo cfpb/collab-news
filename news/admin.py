@@ -1,6 +1,6 @@
 from django.contrib import admin
-from news.models import FeedSubscription, NewsItem, NewsFeed
+from news.models import FeedSubscription, NewsFeed, NewsItem, NewsItemAdmin
 
 admin.site.register(FeedSubscription)
 admin.site.register(NewsFeed)
-admin.site.register(NewsItem)
+admin.site.register(NewsItem, NewsItemAdmin)

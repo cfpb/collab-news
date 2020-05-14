@@ -1,6 +1,10 @@
+from django import forms
+from django.contrib import admin
+from django.contrib.auth import get_user_model
 from django.db import models
-from collab.settings import AUTH_USER_MODEL
 from django.template.defaultfilters import slugify
+
+from collab.settings import AUTH_USER_MODEL
 
 
 class NewsFeed(models.Model):
@@ -57,6 +61,26 @@ class NewsItem(models.Model):
     @property
     def to_search_result(self):
         return self.title
+
+
+class CustomModelChoiceField(forms.ModelChoiceField):
+    def label_from_instance(self, obj):
+        return "%s, %s" % (obj.last_name, obj.first_name)
+
+
+class NewsItemAdminForm(forms.ModelForm):
+    create_user = CustomModelChoiceField(
+        queryset=get_user_model().objects.filter(is_active=True).order_by(
+            'last_name', 'first_name'
+        ).all()
+    )
+
+    class Meta:
+        model = NewsItem
+
+
+class NewsItemAdmin(admin.ModelAdmin):
+    form = NewsItemAdminForm
 
 
 class FeedSubscription(models.Model):
